@@ -1,0 +1,23 @@
+{
+  "name": "basenodews",
+  "version": "1.0.0",
+  "description": "Base nodejs webservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngJavierR/BaseNodeWS.git"
+  },
+  "author": "Javier Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IngJavierR/BaseNodeWS/issues"
+  },
+  "homepage": "https://github.com/IngJavierR/BaseNodeWS#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.3"
+  }
+}
