@@ -1,15 +1,242 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <base href="/">
+<head>
     <meta charset="utf-8">
-    <title>Hermosillo</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
-  <link href="index-c3cf6dbacdb7b96385e444f4107b57ee.css" rel="stylesheet"></head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Acceso Wifi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+    body {
+        font-family: Geneva, Verdana, sans-serif;
+        font-weight: 100;
+        font-size: .8em;
+        line-height: 10px;
+        color: #CCCCCC;
+        font-weight: bold;
+    }
+    .container {
+        max-width: 400px;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+    }
+    #loginForm input[type="text"],
+    #loginForm input[type="email"],
+    #loginForm input[type="tel"],
+    #loginForm input[type="url"],
+    #loginForm textarea,
+    #loginForm button[type="submit"] {
+        font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    }
+    #loginForm {
+        /*background: #131313;*/
+        background-image: url('./imgs/metro_fondo.png');
+        background-size: auto;
+        background-repeat: no-repeat;
+        padding-top: 120px;
+        box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+    fieldset {
+        border: medium none !important;
+        margin: 0 15%;
+        min-width: 100%;
+        padding: 5px;
+        width: 100%;
+    }
+    #loginForm input[type="text"],
+    #loginForm input[type="email"],
+    #loginForm input[type="tel"],
+    #loginForm input[type="url"],
+    #loginForm textarea {
+        width: 70%;
+        border: 1px solid #999999;
+        margin: 0 0 5px;
+        padding: 5px;
+        background: #131313;
+        color: #999999;
+        font-size: 18px;
+        background: #272626;
+    }
+    #loginForm input[type="text"]:hover,
+    #loginForm input[type="email"]:hover,
+    #loginForm input[type="tel"]:hover,
+    #loginForm input[type="url"]:hover,
+    #loginForm textarea:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border: 1px solid #aaa;
+    }
+    /*#loginForm textarea {
+        height: 100px;
+        max-width: 100%;
+        resize: none;
+        color: #999999;
+        font-size: 18px;
+        
+    }*/
+    #loginForm button[type="submit"] {
+        cursor: pointer;
+        width: 70%;
+        border: 1px solid #3b9fdb;
+        background: #131313;;
+        margin: 0 0 5px;
+        color: #3b9fdb;
+        padding: 10px;
+        font-size: 18px;
+    }
+    #loginForm button[type="submit"]:hover {
+        background: #007bff;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+    #loginForm button[type="submit"]:active {
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    .copyright {
+        text-align: center;
+    }
+    .privacidad {
+        font-size: 10px;
+        text-align: center;
+    }
+    .titulo1 {
+        font-family: Geneva, Verdana, sans-serif;
+        font-size: .9em;
+        text-align: center;
+    }
+    #loginForm input:focus,
+    #loginForm textarea:focus {
+        outline: 0;
+        border: 1px solid #aaa;
+    }
+    ::-webkit-input-placeholder {
+        color: #888;
+    }
+    :-moz-placeholder {
+        color: #888;
+    }
+    ::-moz-placeholder {
+        color: #888;
+    }
+    :-ms-input-placeholder {
+        color: #888;
+    }
+    #loginForm div {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    @keyframes blind-high {
+      0%{ fill:hsl(0, 0%, 3%) }
+      0%{ fill:hsl(204, 72%, 57%) }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="#" id="loginForm" method="POST">
+            <p class="titulo1">Ingresa tu datos y disfruta gratis</p>
+            <p class="titulo1">de nuestra red Wifi por 1 hora</p>
+            <fieldset>
+                <input autofocus id="name" placeholder="Nombre" required tabindex="1" type="text" />
+            </fieldset>
+            <fieldset>
+                <input id="lastName" placeholder="Apellido" required tabindex="2" type="text" />
+            </fieldset>
+            <fieldset>
+                <input id="email" placeholder="Email" required tabindex="3" type="email" />
+            </fieldset>
+            <fieldset>
+                <input id="cellPhoneNumber" placeholder="Numero de celular" required tabindex="4" type="text" />
+            </fieldset>
+            <fieldset>
+                <button onmouseout="this.style.background='#131313'" onmouseover="'this.style.background='#131313'" type="submit">ENTRAR</button>
+            </fieldset>
+            <p class="privacidad">Lee nuestro aviso de privacidad</p>
+            <a href="https://www.att.com.mx">
+                <img alt="Att" data-align="center" data-entity-type="file" data-entity-uuid="060a8b23-2acc-47a2-a6cc-deccaf2cbfff" src="./imgs/barra_footer.png" />
+            </a>
+        </form>
+    </div>
 
-  <body>
-    <fountain-root>Loading...</fountain-root>
-  <script type="text/javascript" src="vendor-72b0abf5ecf5c053d013.js"></script><script type="text/javascript" src="main-72b0abf5ecf5c053d013.js"></script></body>
+    <script type="text/javascript">
+        // Parse paramaters
+        var base_grant_url = decodeURIComponent(GetURLParameter("base_grant_url"));
+        var user_continue_url = decodeURIComponent(GetURLParameter("user_continue_url"));
+        var node_mac = GetURLParameter("node_mac");
+        var client_ip = GetURLParameter("client_ip");
+        var client_mac = GetURLParameter("client_mac");
+        console.log("user_continue_url: "+user_continue_url);
+        console.log("client_ip: "+client_ip);
+
+        // Form Submit handler. 
+        document.getElementById('loginForm').onsubmit= function(e){
+            e.preventDefault(); //prevents default form submission process to allow login and validation
+            login();
+        }
+
+        // ******************
+        // Login to Meraki by redirecting client to the base_grant_url 
+        // 
+        // The logingUrl will add a continue_url parameter for a final client
+        // redirect to their intended site. 
+        // (you could override this url to send the user to a home page)
+        // ****************** 
+        function authUser(){
+            /*var loginUrl = base_grant_url;
+            user_continue_url = "https://www.att.com.mx/";
+            loginUrl += "?continue_url="+user_continue_url;
+            console.log("Logging in... ",loginUrl);
+            // redirect browser to meraki auth URL.
+            window.location.href = loginUrl;*/
+        }
+
+        // Button handler function to store the form data and login. 
+        function login() {
+            // send the data somewhere like a database
+            var data = {};
+            data.name = document.getElementById("name").value;
+            data.lastName = document.getElementById("lastName").value;
+            data.email = document.getElementById("email").value;
+            data.cellPhoneNumber = document.getElementById("cellPhoneNumber").value;
+            console.log("Storing data to db...", data);
+            postX(data);
+            // Complete Login
+            //authUser();
+        }
+
+        // Helper function to parse URL
+        function GetURLParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+        function postX(data) {
+            var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+            var theUrl = "http://localhost:3002/addUserConnect";
+            xmlhttp.open("POST", theUrl);
+            xmlhttp.setRequestHeader("Content-Type", "application/json");
+            xmlhttp.send(JSON.stringify(data));
+        }
+    </script>
+</body>
 </html>
